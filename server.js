@@ -1,22 +1,22 @@
-const express = require('express');
-const helmet = require('helmet');
+const express = require("express");
+const helmet = require("helmet");
 const server = express();
 
 // Import Routers
-const projectsRouter = require('./projects/projects-router.js');
-const actionsRouter = require('./actions/actions-router.js');
+const projectsRouter = require("./projects/projects-router");
+const actionsRouter = require("./actions/actions-router");
 
 // Configure Middleware
 server.use(helmet());
 server.use(express.json());
 
 // Use Routers
-server.use('/api/projects', projectsRouter);
-server.use('/api/actions', actionsRouter);
+server.use("/api/projects", projectsRouter);
+server.use("/api/actions", actionsRouter);
 
-// Hello. Server Test.
-server.get('/', (req, res) => {
-    res.send({ message: 'Happy Friday' })
+// Server Test
+server.get("/", (req, res) => {
+  res.send({ message: "Happy Friday" });
 });
 
 module.exports = server;

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const db = require('./projects-model.js');
+const db = require('./projects-model');
 
 // Get projects
 router.get('/', (req, res) => {
