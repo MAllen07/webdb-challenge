@@ -20,9 +20,9 @@ function getById(id) {
         .then(obj => changeBoolean(obj))
 };
 
-function addAction(action) {
+function addAction(actions) {
     return db('actions')
-        .insert(action)
+        .insert(actions)
         .then(id => {
             return getById(id[0])
         })

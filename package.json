@@ -20,7 +20,7 @@
   "author": "",
   "scripts": {
     "start": "node index.js",
-    "server": "nodemon"
+    "server": "nodemon index.js"
   },
   "license": "ISC",
   "bugs": {

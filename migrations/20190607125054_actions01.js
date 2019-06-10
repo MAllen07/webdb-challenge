@@ -1,12 +1,12 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable("actions", tbl => {
-    tbl.increments();
+    tbl.increments(); //primary key
 
     tbl
       .integer("project_id")
       .unsigned()
       .notNullable()
-      .references("id")
+      .references("id") //referencing id from the project
       .inTable("projects")
       .onDelete("RESTRICT")
       .onUpdate("CASCADE");

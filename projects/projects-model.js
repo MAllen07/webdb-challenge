@@ -10,7 +10,7 @@ module.exports = {
 };
 
 function getProjects() {
-    return db('projects')
+    return db('projects') //knex command - accessing all the items in projects table
         .then(projects => projects.map(obj => changeBoolean(obj)))
 };
 
